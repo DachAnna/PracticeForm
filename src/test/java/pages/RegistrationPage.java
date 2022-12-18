@@ -21,7 +21,7 @@ public class RegistrationPage {
             hobbiesWrapper = $("#hobbiesWrapper"),
             stateCityWrapper = $("#stateCity-wrapper");
 
-    CalendarComponent calendar = new CalendarComponent();
+    public static CalendarComponent calendar = new CalendarComponent();
 
     private final String FORM_TITLE = "Student Registration Form";
 

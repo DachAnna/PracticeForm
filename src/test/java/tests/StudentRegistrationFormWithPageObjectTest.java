@@ -1,8 +1,10 @@
-package pages;
+package tests;
 
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
+
 import static com.codeborne.selenide.Selenide.$;
-import static pages.TestData.*;
+import static tests.TestData.*;
 
 public class StudentRegistrationFormWithPageObjectTest extends TestBase {
 
@@ -17,7 +19,7 @@ public class StudentRegistrationFormWithPageObjectTest extends TestBase {
         registrationPage.typeMail(email);
         registrationPage.typeGenderWrapper(gender);
         registrationPage.typeUserNumber(userNumber);
-        registrationPage.calendar.setDate(monthDate, day, year);
+        RegistrationPage.calendar.setDate(monthDate, day, year);
         registrationPage.typeSubjectsInput("h");
         registrationPage.typeHobbiesWrapper("Reading");
         registrationPage.typeHobbiesWrapper("Music");
