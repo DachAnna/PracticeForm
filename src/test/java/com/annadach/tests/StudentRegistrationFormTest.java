@@ -1,27 +1,22 @@
-package tests;
+package com.annadach.tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static com.annadach.tests.TestData.firstName;
+import static com.annadach.tests.TestData.lastName;
 
-public class StudentRegistrationFormTest {
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = "2100x1080";
-}
+public class StudentRegistrationFormTest extends TestBase{
 
     @Test
     void fillFormTest() {
         //заполнение формы
-        open("https://demoqa.com/automation-practice-form");
-        $("#firstName").setValue("Alex");
-        $("#lastName").setValue("Petrov");
+        open("/automation-practice-form");
+        $("#firstName").setValue(firstName);
+        $("#lastName").setValue(lastName);
         $("#userEmail").setValue("alex@qaguru.com");
         $("#genterWrapper").$(byText("Male")).click();
         $("#userNumber").setValue("8652154357");
@@ -44,7 +39,7 @@ public class StudentRegistrationFormTest {
         $("#submit").click();
 
         //Проверка соответствия введенных данных в таблице
-        $(".table-responsive").shouldHave(text("Alex Petrov"),
+        $(".table-responsive").shouldHave(text(firstName + " " + lastName),
                 text("alex@qaguru.com"),
                 text("8652154357"),
                 text("13 June,1992"),

@@ -1,7 +1,7 @@
-package pages;
+package com.annadach.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import pages.components.CalendarComponent;
+import com.annadach.pages.components.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;

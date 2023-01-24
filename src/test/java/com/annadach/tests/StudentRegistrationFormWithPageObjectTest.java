@@ -1,10 +1,10 @@
-package tests;
+package com.annadach.tests;
 
+import com.annadach.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
 
 import static com.codeborne.selenide.Selenide.$;
-import static tests.TestData.*;
+import static com.annadach.tests.TestData.*;
 
 public class StudentRegistrationFormWithPageObjectTest extends TestBase {
 

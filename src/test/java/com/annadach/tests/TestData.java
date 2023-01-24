@@ -1,4 +1,4 @@
-package tests;
+package com.annadach.tests;
 
 import com.github.javafaker.Faker;
 
