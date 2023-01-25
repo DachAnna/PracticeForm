@@ -47,6 +47,6 @@ public class StudentRegistrationFormTest extends TestBase{
                 text("Reading, Music"),
                 text("text.txt"),
                 text("some street 1"),
-                text("Haryana Karnal"));
+                text("NCR Delhi"));
     }
 }

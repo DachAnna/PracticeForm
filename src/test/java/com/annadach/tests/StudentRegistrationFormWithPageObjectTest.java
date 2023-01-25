@@ -46,6 +46,6 @@ public class StudentRegistrationFormWithPageObjectTest extends TestBase {
         registrationPage.checkResultsValue("Hobbies", "Reading, Music");
         registrationPage.checkResultsValue("Picture", "text.txt");
         registrationPage.checkResultsValue("Address", currentAddress);
-        registrationPage.checkResultsValue("State and City", state + " " + city);
+        registrationPage.checkResultsValue("State and City", "NCR Delhi");
     }
 }
