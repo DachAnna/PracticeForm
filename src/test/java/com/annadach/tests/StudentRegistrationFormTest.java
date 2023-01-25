@@ -31,9 +31,9 @@ public class StudentRegistrationFormTest extends TestBase{
         $("#currentAddress").setValue("some street 1");
         $("div").scrollTo();
         $("#state").click();
-        $("#stateCity-wrapper").$(byText("Haryana")).click();
+        $("#stateCity-wrapper").$(byText("NCR")).click();
         $("#city").click();
-        $("#stateCity-wrapper").$(byText("Karnal")).click();
+        $("#stateCity-wrapper").$(byText("Delhi")).click();
 
         //клик по кнопке Submit
         $("#submit").click();
