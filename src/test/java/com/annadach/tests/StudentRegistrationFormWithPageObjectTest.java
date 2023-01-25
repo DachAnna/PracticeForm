@@ -31,6 +31,7 @@ public class StudentRegistrationFormWithPageObjectTest extends TestBase {
         $("#city").click();
         registrationPage.typeStateCityWrapper(city);
 
+        //скролл до кнопки для jenkins
         $("#submit").scrollIntoView(false);
         //клик по кнопке Submit
         $("#submit").click();
