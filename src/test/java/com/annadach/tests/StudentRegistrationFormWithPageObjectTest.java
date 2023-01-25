@@ -25,14 +25,14 @@ public class StudentRegistrationFormWithPageObjectTest extends TestBase {
         registrationPage.typeHobbiesWrapper("Music");
         $("#uploadPicture").uploadFromClasspath("text.txt");
         registrationPage.typeCurrentAddress(currentAddress);
-        $("div").scrollIntoView(true);
+        $("div").scrollIntoView(false);
         $("#state").click();
         registrationPage.typeStateCityWrapper(state);
         $("#city").click();
         registrationPage.typeStateCityWrapper(city);
 
         //скролл до кнопки для jenkins
-        $("#submit").scrollIntoView(true);
+        $("#submit").scrollIntoView(false);
         //клик по кнопке Submit
         $("#submit").click();
 
