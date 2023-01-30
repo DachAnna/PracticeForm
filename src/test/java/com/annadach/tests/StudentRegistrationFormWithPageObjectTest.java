@@ -1,6 +1,7 @@
 package com.annadach.tests;
 
 import com.annadach.pages.RegistrationPage;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -11,6 +12,7 @@ public class StudentRegistrationFormWithPageObjectTest extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Tag("properties")
     void fillFormTest() {
         //заполнение формы
         registrationPage.openPage();
