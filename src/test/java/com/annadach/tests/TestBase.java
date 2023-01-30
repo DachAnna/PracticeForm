@@ -22,8 +22,9 @@ public class TestBase {
     static void setup() {
         String browserSize = System.getProperty("browserSize", "2100x1080");
         String browser = System.getProperty("browser", "chrome");
-        String browserVersion = System.getProperty("browserVersion", "100");
-        String remoteUrl = System.getProperty("remoteUrl", credentials.remoteURL());
+        String browserVersion = System.getProperty("browserVersion", "99");
+        String baseUrl = System.getProperty("https://demoqa.com");
+        String remoteUrl = System.getProperty("remoteUrl", credentials.remoteUrl());
         String login = credentials.login();
         String password = credentials.password();
 
@@ -36,7 +37,7 @@ public class TestBase {
         Configuration.browserSize = browserSize;
         Configuration.browser = browser;
         Configuration.browserVersion = browserVersion;
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = baseUrl;
         Configuration.remote = format("https://%s:%s@%s", login, password, remoteUrl);
     }
 
