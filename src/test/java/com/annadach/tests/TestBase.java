@@ -23,7 +23,7 @@ public class TestBase {
         String browserSize = System.getProperty("browserSize", "2100x1080");
         String browser = System.getProperty("browser", "chrome");
         String browserVersion = System.getProperty("browserVersion", "99");
-        String baseUrl = System.getProperty("https://demoqa.com");
+        String baseUrl = System.getProperty("baseUrl","https://demoqa.com");
         String remoteUrl = System.getProperty("remoteUrl", credentials.remoteUrl());
         String login = credentials.login();
         String password = credentials.password();
