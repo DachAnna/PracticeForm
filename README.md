@@ -14,11 +14,11 @@
 
 ![контейнеры в докере](https://user-images.githubusercontent.com/118796374/222902996-83abd878-6d7e-4f0a-b9eb-cf75ad0dcf5f.jpg)
 
-Run tests with filled remote.properties:
+Перед перезапуском тестов используем команду:
 ```bash
 gradle clean test
 ```
-Serve report:
+Формируем отчет:
 ```bash
 allure serve build/allure-results
 ```
