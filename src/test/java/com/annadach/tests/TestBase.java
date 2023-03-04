@@ -11,8 +11,6 @@ import org.junit.jupiter.api.AfterEach;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import static java.lang.String.format;
-
 
 public class TestBase {
 
@@ -22,11 +20,8 @@ public class TestBase {
     static void setup() {
         String browserSize = System.getProperty("browserSize", "2100x1080");
         String browser = System.getProperty("browser", "chrome");
-        String browserVersion = System.getProperty("browserVersion", "99");
         String baseUrl = System.getProperty("baseUrl","https://demoqa.com");
-        String remoteUrl = System.getProperty("remoteUrl", credentials.remoteUrl());
-        String login = credentials.login();
-        String password = credentials.password();
+        String remoteUrl = System.getProperty("remoteUrl","http://localhost:4444/wd/hub/");
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -36,9 +31,8 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.browserSize = browserSize;
         Configuration.browser = browser;
-        Configuration.browserVersion = browserVersion;
         Configuration.baseUrl = baseUrl;
-        Configuration.remote = format("https://%s:%s@%s", login, password, remoteUrl);
+        Configuration.remote = remoteUrl;
     }
 
     @AfterEach

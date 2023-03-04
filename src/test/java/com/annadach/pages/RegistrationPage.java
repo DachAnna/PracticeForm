@@ -19,7 +19,10 @@ public class RegistrationPage {
             genderWrapper = $("#genterWrapper"),
             subjectsInput = $("#subjectsInput"),
             hobbiesWrapper = $("#hobbiesWrapper"),
-            stateCityWrapper = $("#stateCity-wrapper");
+            stateCityWrapper = $("#stateCity-wrapper"),
+            uploadFile = $("#uploadPicture");
+
+
 
     public static CalendarComponent calendar = new CalendarComponent();
 
@@ -69,5 +72,9 @@ public class RegistrationPage {
     public void checkResultsValue(String key, String value) {
         $x("//td[text()='" + key + "']").parent()
                 .shouldHave(text(value));
+    }
+
+    public void uploadFile () {
+        uploadFile.uploadFromClasspath("text.txt");
     }
 }
